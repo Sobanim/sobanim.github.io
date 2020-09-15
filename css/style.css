@@ -1,10 +1,22 @@
+@charset "UTF-8";
+
 * {
   font-family: "Montserrat", sans-serif;
 }
 
 h1,
+h2,
 body {
   margin: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 .main {
@@ -95,7 +107,7 @@ body {
 .main .online {
   display: flex;
   align-items: center;
-  padding: 0 2.5rem 0 2.5rem;
+  padding: 0 3rem 0 3rem;
   background-color: #004b27;
   height: 100%;
   color: white;
@@ -187,21 +199,172 @@ body {
   height: 4rem;
 }
 
-@media (max-width: 1800px) {
-  .main .nav__link {
-    margin-right: 2.5rem;
-  }
+.beauty {
+  margin-top: 7rem;
+  padding: 0 10rem;
+}
 
+.beauty .beauty-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.beauty .beauty__slider {
+  flex: 0 0 40%;
+}
+
+.beauty .beauty__slider img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.beauty .beauty-descr {
+  margin-left: 5rem;
+}
+
+.beauty .beauty-descr .beauty__header {
+  background: url("../img/krasa-head.png") no-repeat;
+}
+
+.beauty .beauty-descr .beuty__title {
+  padding-top: 5rem;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #333333;
+}
+
+.beauty .beauty-descr .beauty__text p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.beauty .beauty-descr .beauty__list ul {
+  list-style: none;
+  line-height: 2.2rem;
+  font-size: 1.2rem;
+}
+
+.beauty .beauty-descr .beauty__list ul li {
+  background: url("../img/list-icon.png") 0 no-repeat;
+  padding-left: 3rem;
+}
+
+.beauty .beauty__counter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.beauty .beauty__counter p {
+  margin: 0 0 1rem 0;
+}
+
+.beauty .counter {
+  flex: 33.3%;
+  text-align: center;
+}
+
+.beauty .counter.--center {
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+}
+
+.beauty .counter-value {
+  font-size: 2rem;
+}
+
+.beauty .counter-text {
+  font-size: 1.2rem;
+}
+
+.service {
+  margin-top: 7rem;
+  padding: 0 10rem;
+}
+
+.service .service-head {
+  background: url("../img/služby.png") no-repeat center;
+  padding-top: 6rem;
+}
+
+.service .service-head h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 3rem;
+}
+
+.service .service__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.service .item {
+  flex: 1 1 calc(33.33% - 60px);
+  margin: 0px 17px;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  min-width: 240px;
+}
+
+.service .item img {
+  width: 100%;
+  max-width: 650px;
+}
+
+.service .item__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service .item__description p {
+  margin: 0;
+}
+
+@media (min-width: 1369px) {
+  html {
+    font-size: .82vw;
+  }
+}
+
+@media (max-width: 1800px) {
   .main .address {
     margin-left: 4rem;
   }
 
   .main .online {
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 2rem 0 2rem;
   }
 }
 
 @media (max-width: 1600px) {
+  .service .service-head {
+    padding-top: 7rem;
+  }
+}
+
+@media (max-width: 1368px) {
+  html {
+    font-size: 12.037px;
+  }
+
+  .main .logo img {
+    width: 10rem;
+  }
+}
+
+@media (max-width: 1367px) {
+  .beauty .beauty-descr .beauty__list ul {
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 1300px) {
   .main .address {
     display: none;
   }
@@ -209,14 +372,17 @@ body {
   .main .worktime {
     display: none;
   }
+
+  .beauty {
+    padding: 0 5rem;
+  }
+
+  .service {
+    padding: 0 5rem;
+  }
 }
 
 @media (max-width: 1200px) {
-  .main .nav__link {
-    font-size: 1rem;
-    margin-right: 0.5rem;
-  }
-
   .main .contact__tel {
     font-size: 1rem;
   }
@@ -269,6 +435,23 @@ body {
 
   .main .social-links {
     right: 5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .beauty {
+    padding: 0 3rem;
+  }
+
+  .service {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .main .nav__link {
+    font-size: 1rem;
+    margin-right: 0.5rem;
   }
 }
 
@@ -381,6 +564,36 @@ body {
 
   .main .social-links {
     right: 1rem;
+  }
+
+  .beauty {
+    padding: 0 1rem;
+  }
+
+  .beauty .beauty-content {
+    flex-direction: column;
+  }
+
+  .beauty .beauty-descr {
+    margin-left: 0;
+  }
+
+  .beauty .beauty-descr .beauty__header {
+    background-position: top;
+    background-size: 17rem;
+  }
+
+  .beauty .beauty__counter {
+    flex-direction: column;
+  }
+
+  .service {
+    padding: 0 1rem;
+  }
+
+  .service .service-head {
+    padding-top: 4rem;
+    background-size: 17rem;
   }
 }
 
