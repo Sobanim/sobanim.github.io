@@ -8,7 +8,7 @@ let $gameTime = document.querySelector('#game-time')
 
 let score = 0
 let isGameStarted = false
-let name = ''
+let name = null
 let time = ''
 
 $start.addEventListener('click', startGame)
@@ -26,10 +26,10 @@ function startGame() {
     let interval = setInterval(function () {
         let time = parseFloat($time.textContent)
 
-        if(time <= 0){
+        if (time <= 0) {
             clearInterval(interval)
             endGame()
-        }else{
+        } else {
             $time.textContent = (time - 0.1).toFixed(1)
         }
     }, 100)
@@ -61,13 +61,13 @@ function endGame() {
 }
 
 function handleBoxClick(event) {
-    if(!isGameStarted){
+    if (!isGameStarted) {
         return
     }
-   if(event.target.dataset.box){
-       score++
-       renderBox()
-   }
+    if (event.target.dataset.box) {
+        score++
+        renderBox()
+    }
 }
 
 function renderBox() {
@@ -107,13 +107,26 @@ function getRandomColor() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    name = prompt('What is your name?')
-    console.log(name)
+    do{
+        while (name === null){
+            name = prompt('What is your name?', 'Guest')
+            if (name === null){
+                alert('Please write YOUR name')
+            }
+        }
+        if (name.length >= 10) {
+            alert('Your name os tooo long. Please write shorter name')
+        }else if(name.length <= 2){
+            alert('Your name is too shorter. Please write long name')
+        }
+        else{
+            break
+        }
+    }
+    while (name.length >= 10 || name.length <= 2)
 })
 
 function addDataToTable() {
-
-
     let table = document.querySelector('table')
     let row = table.insertRow(1)
     let cell1 = row.insertCell(0)
@@ -122,4 +135,12 @@ function addDataToTable() {
     cell1.innerHTML = name
     cell2.innerHTML = time
     cell3.innerHTML = score
+
+//    Calculate number tr in table
+    let tBody = table.querySelector('tbody')
+    let numberLines = tBody.querySelectorAll('tr').length - 1
+    console.log(numberLines)
+    if (numberLines === 5){
+        table.deleteRow(5)
+    }
 }
