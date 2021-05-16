@@ -1,0 +1,517 @@
+@import "fonts.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg-grey {
+  background: #F0F3F4;
+}
+
+.bg-blue {
+  background-color: #82D2EF;
+}
+
+.bg-health-1 {
+  background: url("../images/health1.jpg");
+}
+
+.bg-health-2 {
+  background: url("../images/health2.jpg");
+}
+
+.bg-health-3 {
+  background: url("../images/health3.jpg");
+}
+
+.bg-health-4 {
+  background: url("../images/health4.jpg");
+}
+
+.wrapper-nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.mg-auto {
+  margin: 0 auto;
+}
+
+header {
+  margin: 0 auto;
+  display: flex;
+  font-family: "Lexend-Regular", sans-serif;
+  font-weight: 400;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 1120px;
+  position: relative;
+}
+header ul.menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 40%;
+}
+header ul.menu li ul.sub-menu {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  top: 60px;
+  left: 24%;
+  list-style: none;
+  background: #135E79;
+}
+header ul.menu li ul.sub-menu li:not(:last-child) {
+  border-bottom: 1px solid #4B98B4;
+}
+header ul.menu li ul.sub-menu li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Lexend-Regular", sans-serif;
+  font-size: 16px;
+  padding: 20px 95px;
+  display: inline-block;
+  transition: 0.3s;
+}
+header ul.menu li ul.sub-menu li a:hover, header ul.menu li ul.sub-menu li a:focus {
+  background: #135E79;
+  color: #82D2EF;
+  transition: 0.3s;
+}
+header ul.menu li ul.sub-menu li a:active, header ul.menu li ul.sub-menu li afocus {
+  color: #F8A826;
+}
+header ul.menu li:first-child:hover .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+header ul.menu li a {
+  text-decoration: none;
+  color: #135E79;
+  font-family: "Lexend-Regular", sans-serif;
+  font-size: 16px;
+  padding: 20px 10px;
+  transition: 0.5s;
+}
+header ul.menu li a:hover {
+  transition: 0.5s;
+  background: #A1DDF3;
+}
+header .social-media a {
+  display: inline-block;
+}
+header .social-media a img {
+  transition: 0.3s;
+}
+header .social-media a img:hover {
+  transform: scale(1.3);
+  transition: 0.3s;
+}
+
+nav {
+  width: 68%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.general {
+  height: 74vh;
+  width: 100%;
+  background: url("../images/general-bg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  position: relative;
+}
+.general__content {
+  position: absolute;
+  left: 21vw;
+  bottom: 4vh;
+  width: 28.6vw;
+  padding: 20px 30px;
+}
+.general__content h1 {
+  font-family: "Lexend-Regular", sans-serif;
+  font-size: 100px;
+  color: #1f1f1f;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+.general__content p {
+  font-family: "Lexend-Regular";
+  font-size: 20px;
+  color: #135E79;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+.general__content-mob {
+  display: none;
+}
+
+.media-logos {
+  margin: 0 auto;
+  width: 1120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mission {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1120px;
+  padding-top: 80px;
+}
+.mission__content h2 {
+  font-family: "Lexend-Regular", sans-serif;
+  font-size: 32px;
+  color: #135E79;
+  line-height: 40px;
+  margin-bottom: 17px;
+}
+.mission__content p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 18px;
+  color: #1f1f1f;
+  line-height: 32px;
+  padding-right: 115px;
+  margin-bottom: 40px;
+}
+.mission__content button {
+  border: none;
+  border-radius: 25px;
+  background-color: #F8A826;
+  box-shadow: 0px 3px 6px #00000029;
+  text-transform: uppercase;
+  color: white;
+  font: 400 18px "Lexend-Regular";
+  padding: 13px 52px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.mission__content button:hover, .mission__content button:focus {
+  background: #E5A02F;
+  transition: 0.3s;
+}
+.mission__content button:active {
+  background: #D6962D;
+}
+.mission__image img {
+  border-radius: 50%;
+  width: 455px;
+  height: 455px;
+  object-fit: cover;
+  object-position: 0 15%;
+  margin-bottom: 100px;
+}
+.mission__decorative {
+  position: absolute;
+  left: 42%;
+  bottom: 0%;
+  z-index: -1;
+}
+
+.wrapper-health {
+  position: relative;
+  z-index: 0;
+}
+
+.health {
+  margin: 0 auto;
+  width: 1120px;
+}
+.health h2 {
+  font-family: "Lexend-Regular", sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  color: #135E79;
+  padding-top: 80px;
+  margin-bottom: 17px;
+  text-align: center;
+}
+.health p {
+  color: #1f1f1f;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0 20% 30px;
+}
+.health__grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  padding-bottom: 80px;
+}
+.health__cell {
+  min-width: 265px;
+  flex: 1 1 calc(25% - 60px);
+  margin: 20px 10px 0 10px;
+  position: relative;
+  transition: all 0.2s ease 0s;
+}
+.health__cell:hover {
+  transform: scale(1.15);
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+}
+.health__cell:hover .health__head {
+  background: #135E79;
+  transition: all 0.2s ease 0s;
+  color: white;
+}
+.health__cell img {
+  width: 100%;
+}
+.health__head {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  background: #82D2EF;
+  padding: 13px;
+  box-sizing: border-box;
+  font-family: "Lexend-Regular", sans-serif;
+  color: #1f1f1f;
+  transition: all 0.2s ease 0s;
+}
+.health__head h3 {
+  font-size: 18px;
+}
+.health__decorative {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+.burger {
+  display: none;
+}
+
+@media (min-width: 2000px) {
+  header ul.menu li a {
+    padding: 17px 10px;
+    font-size: 20px;
+  }
+  header ul.menu li ul.sub-menu li a {
+    font-size: 20px;
+  }
+  header .social-media a img {
+    width: 24px;
+  }
+
+  .general__content {
+    left: 28vw;
+  }
+  .general__content p {
+    font-size: 24px;
+  }
+
+  .mission__content p, .health p {
+    font-size: 22px;
+  }
+
+  .health__head h3 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1600px) {
+  .mission__decorative {
+    width: 46.4vw;
+  }
+
+  .general__content {
+    min-width: 435px;
+  }
+  .general__content h1 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 1366px) {
+  nav ul.menu li ul.sub-menu {
+    left: 27.5%;
+  }
+
+  nav ul.menu li ul.sub-menu li a {
+    padding: 10px 60px;
+  }
+}
+@media (max-width: 1119px) {
+  header {
+    width: 900px;
+  }
+
+  .media-logos {
+    width: 900px;
+  }
+  .media-logos img {
+    width: 15vw;
+    max-height: 4.5vw;
+  }
+
+  .mission {
+    width: 900px;
+  }
+  .mission__image img {
+    height: 35vw;
+    width: 35vw;
+  }
+
+  .health {
+    width: 900px;
+  }
+}
+@media (max-width: 900px) {
+  .general {
+    background-image: url("../images/general-bg-mob.jpg");
+    height: 45vh;
+  }
+  .general__content {
+    display: none;
+  }
+  .general__content-mob {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #82D2EF;
+  }
+  .general__content-mob h1 {
+    padding-top: 10px;
+    font-size: 60px;
+    font-family: "Lexend-Regular", sans-serif;
+  }
+  .general__content-mob p {
+    margin-bottom: 68px;
+    font-size: 20px;
+    font-family: "Lexend-Regular", sans-serif;
+    color: #135E79;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .media-logos {
+    padding: 0 10px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .media-logos img {
+    height: 6.5vw;
+    width: auto;
+    max-height: fit-content;
+  }
+
+  .mission {
+    width: 100%;
+    flex-direction: column-reverse;
+    justify-items: flex-start;
+    align-items: center;
+    padding-top: 40px;
+  }
+  .mission__content {
+    padding: 0 10px;
+  }
+  .mission__content h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .mission__content p {
+    font-size: 16px;
+    padding-right: 0;
+  }
+  .mission__content button {
+    padding: 15px 45px;
+    font-size: 16px;
+    margin-bottom: 70px;
+  }
+  .mission__image img {
+    width: 95vw;
+    height: 95vw;
+    margin-bottom: 40px;
+  }
+  .mission__decorative {
+    top: -25%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+
+  .health {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .health h2 {
+    padding-top: 20px;
+    font-size: 24px;
+  }
+  .health p {
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+  .health__cell {
+    flex: 1 1 calc(50% - 60px);
+    min-width: auto;
+  }
+  .health__decorative {
+    width: 50%;
+  }
+
+  .wrapper-nav {
+    padding: 0 10px;
+  }
+
+  .burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .burger:before, .burger:after {
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    right: 0;
+    transition: all 0.5s ease 0s;
+  }
+  .burger span {
+    position: absolute;
+    background-color: white;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 9px;
+    transition: all 0.5s ease 0s;
+  }
+  .burger:after {
+    bottom: 0;
+  }
+  .burger:before {
+    top: 0;
+  }
+  .burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .burger.active span {
+    transform: scale(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
