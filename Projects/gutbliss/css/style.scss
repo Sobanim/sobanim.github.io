@@ -139,7 +139,7 @@ nav{
 }
 
 .general{
-  height: 74vh;
+  height: 42vw;
   width: 100%;
   background: url("../images/general-bg.jpg") no-repeat 50% 50%;
   background-size: cover;
@@ -383,7 +383,7 @@ nav{
   }
 }
 
-@media (max-width: 1119px){
+@media (max-width: 1130px){
   header{
     width: 900px;
   }
@@ -394,6 +394,22 @@ nav{
       max-height: 4.5vw;
     }
   }
+
+  .general{
+    &__content{
+      padding: 10px 20px;
+      min-width: auto;
+      width: 340px;
+      & h1{
+        font-size: $fz-gn-h1 * 0.5;
+      }
+      & p{
+        margin-bottom: 20px;
+        font-size: $fz-gn-p - 4px;
+      }
+    }
+  }
+
   .mission{
     width: 900px;
 
@@ -409,7 +425,7 @@ nav{
 @media (max-width: 900px) {
   .general{
     background-image: url("../images/general-bg-mob.jpg");
-    height: 45vh;
+    height: 100vw;
 
     &__content{
       display: none;
@@ -443,10 +459,12 @@ nav{
     padding: 0 10px;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+
     & img{
-      height: 6.5vw;
-      width: auto;
-      max-height: fit-content;
+      height: auto;
+      width: 25vw;
+      max-height: 6.5vw;
     }
   }
   .mission{
@@ -477,6 +495,8 @@ nav{
       width: 95vw;
       height: 95vw;
       margin-bottom: 40px;
+      max-width: 395px;
+      max-height: 395px;
     }
 
     &__decorative{
@@ -490,6 +510,14 @@ nav{
     width: 100%;
     padding: 0 10px;
 
+    &__grid{
+      justify-content: space-around;
+    }
+
+    &__head{
+      padding: 8px;
+    }
+
     & h2{
       padding-top: 20px;
       font-size: 24px;
@@ -500,8 +528,10 @@ nav{
     }
 
     &__cell{
-      flex: 1 1 calc(50% - 60px);
+      flex: 1 1 calc(50% - 10px);
       min-width: auto;
+      max-width: 190px;
+      margin: 5px 5px 0 5px;
     }
 
     &__decorative{
@@ -512,37 +542,13 @@ nav{
     padding: 0 10px;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-  //nav{
-  //  position: fixed;
-  //  top: 0;
-  //  left: 0;
-  //  //width: 100%;
-  //  //height: 100%;
-  //  background: black;
-  //  flex-direction: column;
-  //  justify-content: flex-start;
-  //  transition: left 0.3s ease 0s;
-  //}
-
-
   //Burder button
   .burger {
     display: block;
     position: relative;
     width: 30px;
     height: 20px;
+    cursor: pointer;
 
     &:before, &:after {
       content: "";
@@ -584,5 +590,15 @@ nav{
     &.active span {
       transform: scale(0);
     }
+  }
+}
+
+@media (max-width: 360px) {
+  .general__content-mob h1{
+    font-size: $fz-gn-h1 * 0.45;
+  }
+  .general__content-mob p{
+    font-size: $fz-gn-p - 4px;
+    margin-bottom: 30px;
   }
 }

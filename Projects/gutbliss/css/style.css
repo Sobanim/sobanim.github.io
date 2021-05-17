@@ -121,7 +121,7 @@ nav {
 }
 
 .general {
-  height: 74vh;
+  height: 42vw;
   width: 100%;
   background: url("../images/general-bg.jpg") no-repeat 50% 50%;
   background-size: cover;
@@ -342,7 +342,7 @@ nav {
     padding: 10px 60px;
   }
 }
-@media (max-width: 1119px) {
+@media (max-width: 1130px) {
   header {
     width: 900px;
   }
@@ -353,6 +353,19 @@ nav {
   .media-logos img {
     width: 15vw;
     max-height: 4.5vw;
+  }
+
+  .general__content {
+    padding: 10px 20px;
+    min-width: auto;
+    width: 340px;
+  }
+  .general__content h1 {
+    font-size: 50px;
+  }
+  .general__content p {
+    margin-bottom: 20px;
+    font-size: 16px;
   }
 
   .mission {
@@ -370,7 +383,7 @@ nav {
 @media (max-width: 900px) {
   .general {
     background-image: url("../images/general-bg-mob.jpg");
-    height: 45vh;
+    height: 100vw;
   }
   .general__content {
     display: none;
@@ -405,11 +418,12 @@ nav {
     padding: 0 10px;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   .media-logos img {
-    height: 6.5vw;
-    width: auto;
-    max-height: fit-content;
+    height: auto;
+    width: 25vw;
+    max-height: 6.5vw;
   }
 
   .mission {
@@ -439,6 +453,8 @@ nav {
     width: 95vw;
     height: 95vw;
     margin-bottom: 40px;
+    max-width: 395px;
+    max-height: 395px;
   }
   .mission__decorative {
     top: -25%;
@@ -451,6 +467,12 @@ nav {
     width: 100%;
     padding: 0 10px;
   }
+  .health__grid {
+    justify-content: space-around;
+  }
+  .health__head {
+    padding: 8px;
+  }
   .health h2 {
     padding-top: 20px;
     font-size: 24px;
@@ -460,8 +482,10 @@ nav {
     margin: 0 0 10px;
   }
   .health__cell {
-    flex: 1 1 calc(50% - 60px);
+    flex: 1 1 calc(50% - 10px);
     min-width: auto;
+    max-width: 190px;
+    margin: 5px 5px 0 5px;
   }
   .health__decorative {
     width: 50%;
@@ -476,6 +500,7 @@ nav {
     position: relative;
     width: 30px;
     height: 20px;
+    cursor: pointer;
   }
   .burger:before, .burger:after {
     content: "";
@@ -511,6 +536,16 @@ nav {
   }
   .burger.active span {
     transform: scale(0);
+  }
+}
+@media (max-width: 360px) {
+  .general__content-mob h1 {
+    font-size: 45px;
+  }
+
+  .general__content-mob p {
+    font-size: 16px;
+    margin-bottom: 30px;
   }
 }
 
